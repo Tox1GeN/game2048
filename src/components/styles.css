@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+}
+.tbl-brd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 70vh;
+    border: 10px solid #ee4202;
+    background-color: #ee4202;
+    border-radius: 10px;
+    padding: -10px;
+}
+.table {
+    width: 100%;
+    height: 100%;
+    background-color:bisque;
+    border: 1px solid bisque;
+    border-radius: 10px;
+}
