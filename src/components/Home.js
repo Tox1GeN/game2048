@@ -31,4 +31,12 @@ class Home extends Component {
     }
 }
 
+const Cells = (props) => {
+    return props.cells.map(cell => {
+        return (
+            <div id={cell.id} className={cell.className}></div>
+        )
+    })    
+}
+
 export default Home;
