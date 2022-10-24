@@ -29,9 +29,12 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="tbl-brd">
-                <div className="table">
-                    <Cells cells={arrCells} />
+            <div>
+                <div className="top-panel"></div>
+                <div className="tbl-brd">
+                    <div className="table">
+                        <Cells cells={arrCells} />
+                    </div>
                 </div>
             </div>
         )
