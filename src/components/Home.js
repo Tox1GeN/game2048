@@ -25,6 +25,7 @@ class Home extends Component {
         return (
             <div className="tbl-brd">
                 <div className="table">
+                    <Cells cells={arrCells} />
                 </div>
             </div>
         )
