@@ -1,5 +1,24 @@
 import React, { Component } from 'react';
 
+const arrCells = [
+    {id: 1, className: "cell"},
+    {id: 2, className: "cell"},
+    {id: 3, className: "cell"},
+    {id: 4, className: "cell"},
+    {id: 5, className: "cell"},
+    {id: 6, className: "cell"},
+    {id: 7, className: "cell"},
+    {id: 8, className: "cell"},
+    {id: 9, className: "cell"},
+    {id: 10, className: "cell"},
+    {id: 11, className: "cell"},
+    {id: 12, className: "cell"},
+    {id: 13, className: "cell"},
+    {id: 14, className: "cell"},
+    {id: 15, className: "cell"},
+    {id: 16, className: "cell"}
+];
+
 class Home extends Component {
 
     render() {
