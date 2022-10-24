@@ -30,7 +30,27 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div className="top-panel"></div>
+                <div className="top-panel">
+                    <div className="title-buttons">
+                        <div className="title-box">
+                            <h1 className="title">2048</h1>
+                        </div>
+                        <div className="buttons">
+                            <button className="btn"></button>
+                            <button className="btn"></button>
+                        </div>
+                    </div>
+                    <div className="score-best">
+                        <div className="score">
+                            <div className="label">SCORE:</div>
+                            <div className="value">0</div>
+                        </div>
+                        <div className="best">
+                            <div className="label">BEST:</div>
+                            <div className="value">0</div>                            
+                        </div>
+                    </div>
+                </div>
                 <div className="tbl-brd">
                     <div className="table">
                         <Cells cells={arrCells} />
