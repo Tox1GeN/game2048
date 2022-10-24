@@ -20,6 +20,12 @@ const arrCells = [
 ];
 
 class Home extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            value: 2
+        }
+    }
 
     render() {
         return (
