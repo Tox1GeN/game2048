@@ -52,6 +52,18 @@ body {
     border: none;
 }
 
+i {
+    color: white;
+}
+
+.fas {
+    font-size: 1.5rem;
+}
+
+.far {
+    font-size: 1.75rem;
+}
+
 .btn:hover {
     cursor: pointer;
 }
@@ -77,6 +89,7 @@ body {
 
 .label, .value {
     color: white;
+    font-size: 1.25rem;
 }
 /*game-field*/
 .tbl-brd {
