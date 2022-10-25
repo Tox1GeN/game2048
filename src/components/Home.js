@@ -36,8 +36,8 @@ class Home extends Component {
                             <h1 className="title">2048</h1>
                         </div>
                         <div className="buttons">
-                            <button className="btn"></button>
-                            <button className="btn"></button>
+                            <button className="btn"><i class='far fa-question-circle'></i></button>
+                            <button className="btn"><i class='fas fa-redo-alt'></i></button>
                         </div>
                     </div>
                     <div className="score-best">
