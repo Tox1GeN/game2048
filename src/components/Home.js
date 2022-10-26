@@ -36,7 +36,7 @@ class Home extends Component {
                             <h1 className="title">2048</h1>
                         </div>
                         <div className="buttons">
-                            <button className="btn"><i class='far fa-question-circle'></i></button>
+                            <a href="#rule-text" className="btn"><i class='far fa-question-circle'></i></a>
                             <button className="btn"><i class='fas fa-redo-alt'></i></button>
                         </div>
                     </div>
@@ -56,6 +56,8 @@ class Home extends Component {
                         <Cells cells={arrCells} />
                     </div>
                 </div>
+                <Rules />
+                <hr></hr>
             </div>
         )
     }
@@ -67,6 +69,15 @@ const Cells = (props) => {
             <div id={cell.id} className={cell.className}></div>
         )
     })    
+}
+
+const Rules = () => {
+    return (
+        <div className="rule-box">
+            <div className="rule" id="rule-text">HOW TO PLAY: Use your arrow keys to move the tiles. Tiles with the same number merge into one when they touch. Add them up to reach 2048!
+Start playing →</div>            
+        </div>
+    )
 }
 
 export default Home;

@@ -1,11 +1,19 @@
 body {
     display: flex;
-    width: 100vw;
-    height: 100vh;
     background-color: #303030;
     justify-content: center;
     align-items: center;
     font-family: 'OCR A Extended', sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+a {
+    text-decoration: none;
 }
 /*top-panel with title, info and actions in it*/
 .top-panel {
@@ -50,6 +58,9 @@ body {
     border-radius: 10px;
     background-color: #606060;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 i {
@@ -128,4 +139,22 @@ i {
     width: 100%;
     height: 100%;
     border-radius: 5px;
+}
+
+.rule-box {
+    margin-top: 100px;
+    width: 70vw;
+    /*
+    border-radius: 10px;
+    background-color: #505050;
+    */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 100px;
+}
+
+.rule {
+    width: 90%;
 }
