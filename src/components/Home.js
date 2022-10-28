@@ -30,6 +30,7 @@ class Home extends Component {
     render() {
         return (
             <div>
+                <div id="real-top"></div>
                 <div className="top-panel" id="top">
                     <div className="title-buttons">
                         <div className="title-box">
@@ -57,7 +58,7 @@ class Home extends Component {
                     </div>
                 </div>
                 <Rules />
-                <hr></hr>
+                <hr className="divider"/>
             </div>
         )
     }
@@ -75,7 +76,7 @@ const Rules = () => {
     return (
         <div className="rule-box">
             <div className="rule" id="rule-text">HOW TO PLAY: Use your arrow keys to move the tiles. Tiles with the same number merge into one when they touch. Add them up to reach 2048!</div>
-            <a className="return" href="#top">Start playing →</a>            
+            <a className="return" href="#real-top">Start playing →</a>            
         </div>
     )
 }
