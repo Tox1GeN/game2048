@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const arrCells = [
+const arrCellsBG = [
     {id: 1, className: "cell"},
     {id: 2, className: "cell"},
     {id: 3, className: "cell"},
@@ -19,6 +19,25 @@ const arrCells = [
     {id: 16, className: "cell"}
 ];
 
+const arrCellsAct = [
+    {id: '1act', className: "cell act"},
+    {id: '2act', className: "cell act"},
+    {id: '3act', className: "cell act"},
+    {id: '4act', className: "cell act"},
+    {id: '5act', className: "cell act"},
+    {id: '6act', className: "cell act"},
+    {id: '7act', className: "cell act"},
+    {id: '8act', className: "cell act"},
+    {id: '9act', className: "cell act"},
+    {id: '10act', className: "cell act"},
+    {id: '11act', className: "cell act"},
+    {id: '12act', className: "cell act"},
+    {id: '13act', className: "cell act"},
+    {id: '14act', className: "cell act"},
+    {id: '15act', className: "cell act"},
+    {id: '16act', className: "cell act"}
+];
+
 class Home extends Component {
     constructor(props){
         super(props);
@@ -29,7 +48,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
+            <div className="wrapper">
                 <div id="real-top"></div>
                 <div className="top-panel" id="top">
                     <div className="title-buttons">
@@ -54,8 +73,9 @@ class Home extends Component {
                 </div>
                 <div className="tbl-brd">
                     <div className="table">
-                        <Cells cells={arrCells} />
+                        <Cells cells={arrCellsBG} />
                     </div>
+                    <CellsAct cells={arrCellsAct} />
                 </div>
                 <Rules />
                 <hr className="divider"/>
@@ -67,7 +87,15 @@ class Home extends Component {
 const Cells = (props) => {
     return props.cells.map(cell => {
         return (
-            <div id={cell.id} className={cell.className}></div>
+            <div id={cell.id} className={cell.className} style={createBgColor(cell.id)}></div>
+        )
+    })    
+}
+
+const CellsAct = (props) => {
+    return props.cells.map(cell => {
+        return (
+            <div id={cell.id} className={cell.className} style={genXY(parseInt((cell.id).match(/[0-9]+/g)))}></div>
         )
     })    
 }
@@ -81,4 +109,17 @@ const Rules = () => {
     )
 }
 
+const createBgColor = (colorId) => {
+    return {'backgroundColor': 'rgb(50, ' + colorId * 15 + ', 130)'};
+}
+
+const genXY = (id) => {
+    const frCenter = 94;
+    const incr = 98;
+    const frTop = 188;
+    return (id < 5) ? {'top': frTop, 'left': ('calc(50%' + ' - ' + frCenter + 'px - ' + incr + 'px + ' + ((id - 1) * incr) + 'px')}
+        : (id < 9) ? {'top': (frTop + incr), 'left': ('calc(50%' + ' - ' + frCenter + 'px - ' + incr + 'px + ' + ((id - 5) * incr) + 'px')}
+        : (id < 13) ? {'top': (frTop + 2 * incr), 'left': ('calc(50%' + ' - ' + frCenter + 'px - ' + incr + 'px + ' + ((id - 9) * incr) + 'px')}
+        : {'top': (frTop + 3 * incr), 'left': ('calc(50%' + ' - ' + frCenter + 'px - ' + incr + 'px + ' + ((id - 13) * incr) + 'px')};
+}
 export default Home;

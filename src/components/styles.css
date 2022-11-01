@@ -1,4 +1,5 @@
 body {
+    margin: 0px;
     display: flex;
     background-color: #303030;
     justify-content: center;
@@ -28,11 +29,10 @@ a:active, a {
 /*top-panel with title, info and actions in it*/
 .top-panel {
     width: 420px;
-    height: 20vh;
+    height: 170px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
-    margin-top: 50px;
+    
 }
 
 .title-buttons {
@@ -53,6 +53,7 @@ a:active, a {
 .title {
     color: white;
     font-size: 4rem;
+    margin: 0px;
 }
 
 .buttons {
@@ -129,13 +130,12 @@ i {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    align-content: space-evenly;
+    width: 400px;
+    height: 400px;
     background-color:#505050;
     border-radius: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    
 }
 
 .cell {
@@ -169,6 +169,7 @@ i {
 
 .rule {
     width: 90%;
+    padding-left: 15px;
 }
 
 .return {
@@ -176,4 +177,11 @@ i {
     padding: 10px;
     background-color: #505050;
     border-radius: 10px;
+}
+
+.act {
+    position: absolute;
+    background-color: bisque;
+    width: 90px;
+    height: 90px;
 }
